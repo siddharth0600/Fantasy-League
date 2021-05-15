@@ -1,0 +1,22 @@
+<%- include("partials/header"); -%>
+
+<h1>Admin Panel</h1>
+<h2>For Inserting Coaches</h2>
+
+<form class="" action="/Acoach" method="post">
+  <div class="form-group">
+    <label>Coach ID</label>
+    <input class="form-control" type="text" name="c_id" placeholder="CXXX">
+    <label>Coach Name</label>
+    <input type="text" name="c_name" class="form-control">
+    <label>Coach Country</label>
+    <input type="text" name="c_country" class="form-control">
+    <label>Coach Experience in years</label>
+    <input type="text" name="c_exp" class="form-control">
+    <label>Coach Price</label>
+    <input type="text" name="c_price" class="form-control">
+  </div>
+  <button class="btn btn-primary" type="submit" name="button"> Add coach </button>
+</form>
+<a href="/admin"><h3>Click here to go back to admin panel</h3></a>
+<%- include("partials/footer"); -%>

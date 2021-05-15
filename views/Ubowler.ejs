@@ -1,0 +1,29 @@
+<%- include("partials/header"); -%>
+<h1>Your Bowlers</h1>
+<% balls.forEach(function(ball){ %>
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Matches Played</th>
+      <th scope="col">Economy Rate</th>
+      <th scope="col">Wicket</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"><%= ball.bo_id %></th>
+      <td><%= ball.name %></td>
+      <td><%= ball.matches %></td>
+      <td><%= ball.economy %></td>
+      <td><%= ball.wicket %></td>
+      <td><%= ball.price %></td>
+    </tr>
+  </tbody>
+</table>
+<% }) %>
+
+<%- include("partials/footer"); -%>

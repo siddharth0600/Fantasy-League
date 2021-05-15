@@ -1,0 +1,24 @@
+<%- include("partials/header"); -%>
+<h1>Admin Panel</h1>
+<h2>For Inserting bowler</h2>
+
+<form class="" action="/Abowler" method="post">
+  <div class="form-group">
+    <label>Bowler ID</label>
+    <input class="form-control" type="text" name="bo_id" placeholder="BOXXX">
+    <label>Bowler Name</label>
+    <input type="text" name="bo_name" class="form-control">
+    <label>Total Wickets taken</label>
+    <input type="text" name="bo_wicket" class="form-control">
+    <label>Total matches played</label>
+    <input type="text" name="bo_match" class="form-control">
+    <label>Economy rate</label>
+    <input type="text" name="bo_eco" class="form-control">
+    <label>Enter Price</label>
+    <input type="text" name="bo_price" class="form-control">
+  </div>
+  <button class="btn btn-primary" type="submit" name="button"> Add Bowler </button>
+</form>
+<a href="/admin"><h3>Click here to go back to admin panel</h3></a>
+
+<%- include("partials/footer"); -%>

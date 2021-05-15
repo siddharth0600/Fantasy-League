@@ -1,0 +1,25 @@
+<%- include("partials/header"); -%>
+
+<h1>Admin Panel</h1>
+<h2>For Inserting All-Rounder</h2>
+
+<form class="" action="/Aallrounder" method="post">
+  <div class="form-group">
+    <label>All-Rounder ID</label>
+    <input class="form-control" type="text" name="a_id" placeholder="AXXX">
+    <label>All-Rounder Name</label>
+    <input type="text" name="a_name" class="form-control">
+    <label>Total Runs Scored</label>
+    <input type="text" name="a_runs" class="form-control">
+    <label>Total Matches played</label>
+    <input type="text" name="a_match" class="form-control">
+    <label>Total Wickets taken</label>
+    <input type="text" name="a_wicket" class="form-control">
+    <label>Enter Price</label>
+    <input type="text" name="a_price" class="form-control">
+  </div>
+  <button class="btn btn-primary" type="submit" name="button"> Add All-Rounder </button>
+</form>
+<a href="/admin"><h3>Click here to go back to admin panel</h3></a>
+
+<%- include("partials/footer"); -%>

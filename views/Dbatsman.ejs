@@ -1,0 +1,43 @@
+<%- include("partials/header"); -%>
+
+<h1>Your Batsmen</h1>
+<% bats.forEach(function(bat){ %>
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Matches Played</th>
+      <th scope="col">Runs Scored</th>
+      <th scope="col">Strikerate</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"><%= bat.b_id %></th>
+      <td><%= bat.name %></td>
+      <td><%= bat.matches %></td>
+      <td><%= bat.runs %></td>
+      <td><%= bat.strikeRate %></td>
+      <td><%= bat.price %></td>
+    </tr>
+  </tbody>
+</table>
+<% }) %>
+
+<h2>Type ID and price of the player you want to delete</h2>
+
+<form class="" action="/Dbatsman" method="post">
+  <div class="form-group">
+    <label>Batsman ID</label>
+    <input class="form-control" type="text" name="b_id" placeholder="BXXX">
+    <label>Enter Price</label>
+    <input type="text" name="b_price" class="form-control">
+  </div>
+  <button class="btn btn-primary" type="submit" name="button"> Delete Batsman</button>
+</form>
+
+
+<%- include("partials/footer"); -%>

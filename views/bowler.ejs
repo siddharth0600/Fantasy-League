@@ -1,0 +1,51 @@
+<%- include("partials/header"); -%>
+
+
+<% balls.forEach(function(ball){ %>
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Matches Played</th>
+      <th scope="col">Economy Rate</th>
+      <th scope="col">Wicket</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"><%= ball.bo_id %></th>
+      <td><%= ball.name %></td>
+      <td><%= ball.matches %></td>
+      <td><%= ball.economy %></td>
+      <td><%= ball.wicket %></td>
+      <td><%= ball.price %></td>
+    </tr>
+  </tbody>
+</table>
+<% }) %>
+
+<h2>Type all the details of the bowler you want to insert in your team from the above list</h2>
+
+<form class="" action="/bowler" method="post">
+  <div class="form-group">
+    <label>Bowler ID</label>
+    <input class="form-control" type="text" name="bo_id" placeholder="BOXXX">
+    <label>Bowler Name</label>
+    <input type="text" name="bo_name" class="form-control">
+    <label>Total Wickets taken</label>
+    <input type="text" name="bo_wicket" class="form-control">
+    <label>Total matches played</label>
+    <input type="text" name="bo_match" class="form-control">
+    <label>Economy rate</label>
+    <input type="text" name="bo_eco" class="form-control">
+    <label>Enter Price</label>
+    <input type="text" name="bo_price" class="form-control">
+  </div>
+  <button class="btn btn-primary" type="submit" name="button"> Add Bowler </button>
+</form>
+
+
+<%- include("partials/footer"); -%>

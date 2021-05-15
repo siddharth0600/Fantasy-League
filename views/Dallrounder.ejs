@@ -1,0 +1,40 @@
+<%- include("partials/header"); -%>
+
+<h1>Your All-Rounders</h1>
+<% alls.forEach(function(all){ %>
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Matches Played</th>
+      <th scope="col">Runs Scored</th>
+      <th scope="col">Wickets taken</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"><%= all.a_id %></th>
+      <td><%= all.name %></td>
+      <td><%= all.matches %></td>
+      <td><%= all.runs %></td>
+      <td><%= all.wickets %></td>
+      <td><%= all.price %></td>
+    </tr>
+  </tbody>
+</table>
+<% }) %>
+<h2>Type ID and price of the player you want to delete</h2>
+<form class="" action="/Dallrounder" method="post">
+  <div class="form-group">
+    <label>All-Rounder ID</label>
+    <input class="form-control" type="text" name="a_id" placeholder="AXXX">
+    <label>Enter Price</label>
+    <input type="text" name="a_price" class="form-control">
+  </div>
+  <button class="btn btn-primary" type="submit" name="button"> Delete All-Rounder </button>
+</form>
+
+<%- include("partials/footer"); -%>

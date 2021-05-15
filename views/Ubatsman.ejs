@@ -1,0 +1,29 @@
+<%- include("partials/header"); -%>
+<h1>Your Batsmen</h1>
+<% bats.forEach(function(bat){ %>
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Matches Played</th>
+      <th scope="col">Runs Scored</th>
+      <th scope="col">Strikerate</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"><%= bat.b_id %></th>
+      <td><%= bat.name %></td>
+      <td><%= bat.matches %></td>
+      <td><%= bat.runs %></td>
+      <td><%= bat.strikeRate %></td>
+      <td><%= bat.price %></td>
+    </tr>
+  </tbody>
+</table>
+<% }) %>
+
+<%- include("partials/footer"); -%>

@@ -1,0 +1,27 @@
+<%- include("partials/header"); -%>
+<h1>Your Coaches</h1>
+<% cos.forEach(function(co){ %>
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Country</th>
+      <th scope="col">Experience(in years)</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row"><%= co.c_id %></th>
+      <td><%= co.name %></td>
+      <td><%= co.con %></td>
+      <td><%= co.exp %></td>
+      <td><%= co.price %></td>
+    </tr>
+  </tbody>
+</table>
+<% }) %>
+
+<%- include("partials/footer"); -%>
